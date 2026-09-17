@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>协作文档</title>
+  <script type="module" crossorigin src="/assets/index-BzhASAZY.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dn-maNZS.css">
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div class="brand">协作文档</div>
+      <div id="doc-name"></div>
+      <div class="spacer"></div>
+      <div id="peers"></div>
+      <div id="conn-status" class="status offline">离线</div>
+      <button id="btn-add-comment" disabled>💬 评论选中文字</button>
+      <button id="btn-history">🕘 历史版本</button>
+    </header>
+    <main id="layout">
+      <div id="editor-wrap">
+        <div id="editor"></div>
+        <div id="offline-banner" hidden>当前处于离线状态，编辑会保存在本地，恢复连接后自动合并。</div>
+      </div>
+      <aside id="sidebar">
+        <div id="reattach-hint" hidden>请在文档中选中一段文字，作为该评论的新锚点。</div>
+        <h2>评论</h2>
+        <div id="comment-list"></div>
+        <h2 id="dangling-title" hidden>悬空评论</h2>
+        <div id="dangling-list"></div>
+      </aside>
+    </main>
+  </div>
+
+  <div id="history-modal" class="modal" hidden>
+    <div class="modal-box">
+      <div class="modal-head">
+        <h2>修订时间线</h2>
+        <div>
+          <button id="btn-new-snapshot">📸 新建快照</button>
+          <button id="btn-close-history">✕</button>
+        </div>
+      </div>
+      <div id="revision-list"></div>
+    </div>
+  </div>
+
+  <div id="preview-modal" class="modal" hidden>
+    <div class="modal-box">
+      <div class="modal-head">
+        <h2 id="preview-title">版本预览</h2>
+        <button id="btn-close-preview">✕</button>
+      </div>
+      <pre id="preview-content"></pre>
+    </div>
+  </div>
+
+</body>
+</html>

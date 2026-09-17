@@ -1,0 +1,19 @@
+services:
+  server:
+    build: ./server
+    ports:
+      - "8080:8080"
+    volumes:
+      - server-data:/app/data
+    environment:
+      - AUTOSNAPSHOT_INTERVAL=60000
+
+  web:
+    build: ./web
+    ports:
+      - "8081:80"
+    depends_on:
+      - server
+
+volumes:
+  server-data:

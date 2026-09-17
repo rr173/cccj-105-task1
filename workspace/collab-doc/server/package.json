@@ -1,0 +1,21 @@
+{
+  "name": "collab-doc-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CRDT collaboration server: Yjs sync, persistence, revision timeline",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "lib0": "^0.2.99",
+    "ws": "^8.18.0",
+    "y-protocols": "^1.0.6",
+    "yjs": "^13.6.20"
+  },
+  "devDependencies": {
+    "y-websocket": "^1.5.4"
+  }
+}
